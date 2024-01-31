@@ -16,11 +16,16 @@ const TrafficLight = () => {
         }
       }
     });
-  }, [color]); // Este efecto se ejecuta cada vez que 'color' cambia
+  }, [color]);
 
-  // Manejadores de eventos para cambiar el color
   const handleClick = (colorDiv) => {
     setColor(colorDiv);
+  };
+
+  const toggleColor = () => {
+    const currentIndex = colors.indexOf(color);
+    const nextIndex = (currentIndex + 1) % colors.length;
+    setColor(colors[nextIndex]);
   };
 
   return (

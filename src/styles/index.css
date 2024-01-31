@@ -33,4 +33,28 @@
   #greenLight.active {
     background-color: green;
   }
+
+  #purpleLight.active {
+    background-color: purple;
+  }
   
+  #redLight {
+    background-color: red;
+  }
+  
+  #yellowLight {
+    background-color: yellow;
+  }
+  
+  #greenLight {
+    background-color: green;
+  }
+
+  #purpleLight {
+    background-color: purple;
+  }
+
+  .btn-purple {
+    background-color: purple;
+    color: white;
+}
