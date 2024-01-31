@@ -1,31 +1,23 @@
-// TrafficLight.js
 import React, { useState, useEffect } from "react";
 
-const TrafficLight = () => {
-  const [color, setColor] = useState("red");
+const TrafficLight = ({ currentColor, changeCurrentColor }) => {
 
   useEffect(() => {
     const colors = ["red", "yellow", "green"];
     colors.forEach(c => {
       const lightElement = document.getElementById(`${c}Light`);
       if (lightElement) {
-        if (c === color) {
+        if (c === currentColor) {
           lightElement.classList.add("active");
         } else {
           lightElement.classList.remove("active");
         }
       }
     });
-  }, [color]);
+  }, [currentColor]);
 
   const handleClick = (colorDiv) => {
-    setColor(colorDiv);
-  };
-
-  const toggleColor = () => {
-    const currentIndex = colors.indexOf(color);
-    const nextIndex = (currentIndex + 1) % colors.length;
-    setColor(colors[nextIndex]);
+    changeCurrentColor(colorDiv);
   };
 
   return (
