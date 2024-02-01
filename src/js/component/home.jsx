@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import TrafficLight from "./TrafficLight";
 import ToggleButton from "./ToggleButton";
-import PurpleButton from "./PurpleButton";
 
 const Home = () => {
   const [currentColor, setCurrentColor] = useState("red");
@@ -15,8 +14,6 @@ const Home = () => {
       <br></br>
       <ToggleButton currentColor={currentColor} changeCurrentColor={setCurrentColor} />
       <br></br>
-      <br></br>
-      <PurpleButton />
     </div>
   );
 };
